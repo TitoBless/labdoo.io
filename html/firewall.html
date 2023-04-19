@@ -1,0 +1,95 @@
+<!DOCTYPE html/css>
+<html lang="en">
+<head>
+    <link rel="icon" type="png" href="..\imagenes\labdoo\favicon.png">   
+</head>
+<header>
+    <title>Firewall - G6</title>
+    <div><img class="imagen1" src="..\imagenes\labdoo\simplemente.png"></div>
+    <link rel="stylesheet" href="..\css\firewall.css">
+    <section class="wrapper">
+          <nav>
+              <ul>
+                  <li><a href="..\html\labdoo.html">Inicio</a></li>
+                  <li><a href="..\html\dhcp.html">DHCP</a></li>
+                  <li><a href="..\html\dns.html">DNS</a></li>
+                  <li><a href="..\html\pressupost.html">Pressupost</a></li>
+                  <li><a href="..\html\servidorproxy.html">S.Proxy</a></li>
+                  <li><a href="..\html\servidorweb.html">S.Web</a></li>
+                  <li><a href="..\html\firewall.html">Firewall</a></li>
+                  <li><a href="..\html\copia.html">Copia de Seguretat</a></li>
+                  <li><a href="..\html\contacto.html">Contactanos</a></li>
+              </ul>
+      </nav>
+      </section>
+  </header>
+  <br></br><br></br>
+  <body>
+    
+    <h1>Firewall</h1>
+    <h3>Firewall Iptables</h3>
+    <br>
+<section>
+    <p class="etiqueta">#!/bin/sh</p>
+
+    <p class="echo">echo Aplicando Reglas de Firewall...</p>
+
+    <p class="etiqueta">#limpieza</p>
+    <p>iptables -F</p>
+    <p>iptables -X</p>
+    <p>iptables -Z</p>
+    <p>iptables -t nat -F</p>
+
+    <p class="etiqueta">#PD Denegar</p>
+    <p>iptables -P INPUT DROP</p>
+    <p>iptables -P OUTPUT DROP</p>
+    <p>iptables -P FORWARD DROP</p>
+    <p>iptables -P PREROUTING DROP</p>
+    <p>iptables -P POSTROUTING DROP</p>
+
+    <p class="etiqueta">#Aceptar conexiones establecidas </p>
+    <p>iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT</p>
+    <p>iptables -A OUTPUT -m state --state ESTABLISHED -j ACCEPT</p>
+
+    <p class="etiqueta">#NAT</p>
+    <p>iptables -t nat -A POSTROUTING -s 172.16.90.0/24 -o eth0 -j MASQUERADE</p>
+
+    <p class="etiqueta">#http i https</p>
+    <p>iptables -A FORWARD -s 172.16.90.0/24 -p tcp --dport 80 -j ACCEPT</p>
+    <p>iptables -A FORWARD -s 172.16.90.0/24 -p tcp --dport 443 -j ACCEPT </p>
+
+    <p class="etiqueta">#anydesk i terminal server</p>
+    <p>iptables -A OUTPUT -s 172.168.90.0/24 -p tcp --sport 3389 -j ACCEPT</p>
+    <p>iptables -A OUTPUT -s 172.168.90.0/24 -p tcp --sport 6568 -j ACCEPT </p>
+
+    <p class="etiqueta">#DNS </p>
+    <p>iptales -A FORWARD -p tcp --dport 53 -j ACCEPT</p>
+    <p>iptales -A FORWARD -p udp  --dport 53 -j ACCEPT</p>
+
+    <p class="etiqueta">#FTP </p>
+    <p>iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT</p>
+
+    <p class="etiqueta">#Logs </p>
+    <p>iptables -A INPUT -j LOG --log-prefix "iptables INPUT: " --log-level 4 </p>
+    <p>iptables -A OUTPUT -j LOG --log-prefix "iptables OUTPUT: " --log-level 4</p>
+    <p>iptables -A FORWARD -j LOG --log-prefix "iptables FORWARD: " --log-level 4</p>
+
+    <p class="echo">echo Firewall Aplicado bip bip bup!</p>
+
+</section>
+
+<section>
+    <br></br><br></br>
+            <div class="esquema1">
+            <h4>Explicació del Firewall</h4>
+        
+            <div class="info">
+                <img class="imagenes1" src="..\imagenes\imagenesfirewall\firewall.png" alt="">
+                <div  class="explicar1">
+                    <p class="explicacion1">Aquest es un Firewall senzill però funcional, permetent per exemple conexions a servidors DNS externs, conexions remotes a AnyDesk o Terminal Server a més a més de fer log de cada cosa que accepta entre altres coses. </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>

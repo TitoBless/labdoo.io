@@ -1,0 +1,463 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(231, 229, 229);
+  }
+
+  h1 {
+    color: navy;
+  }
+
+  #desplegable {
+    position: absolute;
+    display: none;
+
+  }
+
+  #Funcions:hover #desplegable {
+      display: block;
+  }
+  
+  #Funcions:hover {
+      opacity: 0.7;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .wrapper {
+    width: 80%;
+    margin: auto;
+    overflow:hidden;
+  }
+  header {
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+  }
+  
+  nav {
+    float: left; /* Desplazamos el nav hacia la izquierda */
+  }
+  nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+  }
+  nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  nav ul li:hover {
+    background: #3ead47;
+  }
+  .contenido {
+    padding-top: 80px;
+  }
+  
+  .imagen1 {
+    height: 50px; 
+    width: 120px;
+    float: left;
+    margin-left: 30px;
+  }
+
+  .td1 {
+    margin-left:"70px" 
+
+  }
+
+/*Estructura de la información y la pagina: */
+
+ section{
+    width: 70%;
+    margin: auto;
+ } 
+
+ h4{
+  clear:both;
+  text-align: left;
+  margin:10px 0px;
+  background-color: rgb(243, 229, 217);
+}
+
+ .esquema1 {
+    margin-top: 30px;
+    height: 350px;
+    background-color: seashell;
+
+ }
+
+ .imagenes1 {
+    float:left;
+    height: 40px;
+    width: 400px;    
+ }
+
+ .explicar1{
+    border-color: black ;
+    border: 10px;
+    height: 300px;
+    width: 400px;
+    float: right;
+ }
+ .explicacion1 {
+    font-style: oblique; 
+    margin-top: 125px;
+    margin-right: 40px;
+    text-align: left;
+ }
+
+ .esquema2 {
+    margin-top: 30px;
+    height: 625px;
+    background-color: seashell;
+ }
+.imagenes2 {
+   float: center;
+   height: 400px;
+   width: 550px;    
+}
+
+.explicar2{
+   border-color: black ;
+   border: 0px;
+   height: 350px;
+   width: 450px;
+   float: left;
+}
+.explicacion2 {
+    font-style: oblique; 
+    margin-top: 125px;
+    margin-right: 40px;
+    margin-left: 20px;
+    text-align: left;
+ }
+
+.esquema3 {
+    margin-top: 155px;
+    margin-bottom: 40px;
+    height: 200px;
+    background-color: seashell;
+ }
+.imagenes3 {
+    float: left;
+    height: 50px;
+    width: 700px;    
+ }
+ 
+ .explicar3 {
+    border-color: black ;
+    border: 10px;
+    height: 50px;
+    width: 1000px;
+ }
+ .explicacion3 {
+    font-style: oblique; 
+    margin-top: 50px;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 10px;
+
+ }
+
+ .esquema4 {
+  margin-top: 30px;
+  height: 200px;
+  background-color: seashell;
+}
+.imagenes4 {
+  float:left;
+  margin-top: 50px;
+  height: 40px;
+  width: 400px;  
+}
+.explicar4 {
+  border-color: black ;
+  border: 10px;
+  height: 300px;
+  width: 400px;
+  float: right;
+}
+.explicacion4 {
+  font-style: oblique; 
+  margin-top: 55px;
+  margin-right: 10px;
+  text-align: left;
+}
+.esquema5 {
+  margin-top: 130px;
+  height: 200px;
+  background-color: seashell;
+}
+.imagenes5 {
+  align-items: center;
+  height: 30px;
+  width: 500px;    
+}
+
+.explicar5 {
+  border-color: black ;
+  border: 10px;
+  height: 50px;
+  width: 1000px;
+}
+.explicacion5 {
+  font-style: oblique; 
+  margin-top: 50px;
+  text-align: center;
+  margin-right: 150px;
+  margin-left: 150px;
+
+}
+
+.esquema6 {
+  margin-top: 30px;
+  height: 350px;
+  background-color: seashell;
+}
+.imagenes6 {
+  float:left;
+  height: 250px;
+  width: 300px;  
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.explicar6 {
+  border-color: black ;
+  border: 10px;
+  height: 300px;
+  width: 400px;
+  float: right;
+}
+.explicacion6 {
+  font-style: oblique; 
+  margin-top: 125px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.esquema7 {
+  margin-top: 30px;
+  height: 200px;
+  background-color: seashell;
+}
+.imagenes7{
+  align-items: center;
+  height: 50px;
+  width: 500px;    
+}
+
+.explicar7 {
+  border-color: black ;
+  border: 10px;
+  height: 50px;
+  width: 1000px;
+}
+.explicacion7 {
+  font-style: oblique; 
+  margin-top: 50px;
+  text-align: center;
+  margin-right: 100px ;
+}
+
+.esquema8 {
+  margin-top: 30px;
+  height: 350px;
+  background-color: seashell;
+}
+.imagenes8 {
+  float:left;
+  height: 300px;
+  width: 400px;  
+  margin-left: 10px;
+}
+.explicar8 {
+  border-color: black ;
+  border: 10px;
+  height: 300px;
+  width: 400px;
+  float: right;
+}
+.explicacion8 {
+  font-style: oblique; 
+  margin-top: 130px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.esquema9 {
+  margin-top: 30px;
+  height: 200px;
+  background-color: seashell;
+}
+.imagenes9 {
+  align-items: center;
+  height: 50px;
+  width: 500px;    
+}
+
+.explicar9 {
+  border-color: black ;
+  border: 10px;
+  height: 50px; 
+  width: 1000px;
+}
+.explicacion9 {
+  text-align: center;
+  font-style: oblique; 
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left: 50px ;
+}
+
+.esquema10 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 120px;
+  background-color: seashell;
+}
+
+.imagenes10 {
+  align-items: center;
+  height: 25px;
+  width: 250px;    
+}
+
+.explicar10 {
+  border-color: black ;
+  border: 10px;
+  height: 50px; 
+  width: 1000px;
+}
+.explicacion10 {
+  text-align: center;
+  font-style: oblique; 
+  margin-top: 25px;
+  margin-right: 50px ;
+}
+
+.esquema11 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 500px;
+  background-color: seashell;
+}
+
+.imagenes11 {
+  align-items: center;
+  height: 400px;
+  width: 300px;    
+}
+
+.explicar11 {
+  border-color: black ;
+  border: 10px;
+  height: 45px; 
+  width: 1000px;
+}
+.explicacion11 {
+  text-align: center;
+  font-style: oblique; 
+  margin-top: 25px;
+  margin-right: 200px ;
+  margin-left: 100px;
+
+}
+
+.esquema12 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 600px;
+  background-color: seashell;
+}
+
+.imagenes12 {
+  align-items: center;
+  height: 500px;
+  width: 400px;    
+}
+
+.explicar12 {
+  border-color: black ;
+  border: 10px;
+  height: 45px; 
+  width: 1000px;
+}
+.explicacion12 {
+  text-align: center;
+  font-style: oblique; 
+  margin-top: 25px;
+  margin-right: 200px ;
+  margin-left: 100px;
+
+}
+
+.esquema13 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 200px;
+  background-color: seashell;
+}
+
+.imagenes13 {
+  align-items: center;
+  height: 50px;
+  width: 600px;    
+}
+
+.explicar13 {
+  border-color: black ;
+  border: 10px;
+  height: 45px; 
+  width: 1000px;
+}
+.explicacion13 {
+  text-align: center;
+  font-style: oblique; 
+  margin-top: 25px;
+  margin-right: 200px ;
+  margin-left: 100px;
+
+}
+
+.esquema14 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 100px;
+  background-color: seashell;
+}
+
+
+.explicar14 {
+  border-color: black ;
+  border: 10px;
+  height: 45px; 
+  width: 1000px;
+}
+.explicacio14 {
+  text-align: left;
+  font-style: oblique; 
+  margin-top: 10px;
+  margin-right: 200px;
+  margin-left: 100px;
+
+}

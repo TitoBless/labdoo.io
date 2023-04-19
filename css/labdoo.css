@@ -1,0 +1,215 @@
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(231, 229, 229);
+      }
+      
+      h1 {
+        color: navy;
+      }
+
+      #desplegable {
+        position: absolute;
+        display: none;
+
+      }
+
+      #Funcions:hover #desplegable {
+          display: block;
+      }
+      
+      #Funcions:hover {
+          opacity: 0.7;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: left;
+      }
+      
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .wrapper {
+        width: 80%;
+        margin: auto;
+        overflow:hidden;
+      }
+      header {
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+      }
+      
+      nav {
+        float: left; /* Desplazamos el nav hacia la izquierda */
+      }
+      nav ul {
+        list-style: none;
+        overflow: hidden; /* Limpiamos errores de float */
+      }
+      nav ul li {
+        float: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      nav ul li a {
+        display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+        padding: 20px;
+        color: #fff;
+        text-decoration: none;
+      }
+      nav ul li:hover {
+        background: #3ead47;
+      }
+      .contenido {
+        padding-top: 80px;
+      }
+      
+      .imagen1 {
+        height: 50px; 
+        width: 120px;
+        float: left;
+        margin-left: 30px;
+      }
+
+      .td1 {
+        margin-left:"70px" 
+
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .presentació {
+        text-align: center;
+      }
+      section{
+        width: 70%;
+        margin: auto;
+     } 
+    
+
+/*** ESTILOS BOTÓN SLIDE BOTTOM ***/
+.ov-btn-slide-bottom {
+  background: #fff; /* color de fondo */
+  color: #4741d7; /* color de fuente */
+  border: 2px solid #4741d7; /* tamaño y color de borde */
+  padding: 16px 20px;
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.ov-btn-slide-bottom:hover {
+  color: #fff; /* color de fuente hover */
+}
+.ov-btn-slide-bottom::after {
+  content: "";
+  background: #4741d7; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: -100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.ov-btn-slide-bottom:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+
+.font-size {
+font-size: small;
+font-family: sans-serif;
+}
+
+.imagenes img { 
+ text-align: center;
+ width: 275px;
+ height: 260px;
+
+}
+
+.structure {
+
+    width: 275px;
+    margin-left: 300px;
+    border: 1px solid;
+    border-color:#DCDCDC;
+    border-top: 2px solid;
+    border-top-color: black;
+}
+
+.wp-container-7 > .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+ }
+ .wp-container-7 > .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+ }
+ .wp-container-7 > .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+ }
+
+ .wp-container-8 > .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+ }
+ .wp-container-8 > .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+ }
+ .wp-container-8 > .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+ }
+
+ .wp-container-9 > .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+ }
+ .wp-container-9 > .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+ }
+ .wp-container-9 > .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+ }
+
+ .wp-container-10 {
+  display: flex;
+  gap: 2em;
+  flex-wrap: nowrap;
+  align-items: center;
+ }
+ .wp-container-10 > * {
+  margin: 0;
+ }

@@ -1,0 +1,236 @@
+<!DOCTYPE html/css>
+<html lang="en">
+<head>
+    <link rel="icon" type="png" href="..\imagenes\labdoo\favicon.png">   
+</head>
+<header>
+    <title>Servidor Web - G6</title>
+    <div><img class="imagen1" src="..\imagenes\labdoo\simplemente.png"></div>
+    <link rel="stylesheet" href="..\css\servidorweb.css">
+    <section class="wrapper">
+          <nav>
+              <ul>
+                  <li><a href="..\html\labdoo.html">Inicio</a></li>
+                  <li id="funcions"><a>Funcions</a>                
+                    <ul id="desplegable">                
+                            <li><a href=".\html\artistesinternacionals.html">Internacionals</a></li>
+                            <li><a href=".\html\artistesnacionals.html">Nacionals</a></li>
+                    </ul>
+                </li>
+                  <li><a href="..\html\dhcp.html">DHCP</a></li>
+                  <li><a href="..\html\dns.html">DNS</a></li>
+                  <li><a href="..\html\pressupost.html">Pressupost</a></li>
+                  <li><a href="..\html\servidorproxy.html">S.Proxy</a></li>
+                  <li><a href="..\html\servidorweb.html">S.Web</a></li>
+                  <li><a href="..\html\firewall.html">Firewall</a></li>
+                  <li><a href="..\html\copia.html">Copia de Seguretat</a></li>
+                  <li><a href="..\html\contacto.html">Contactanos</a></li>
+              </ul>
+      </nav>
+      </section>
+  </header>
+<br><br><br><br><br>
+  <body>
+    <section>
+        <h1>SW</h1>
+        <h3>Servidor Web</h3>
+        <br>
+        <div class="introducion">
+            <p>Que es i per a que serveix </p>
+        </div>
+    </section>
+
+    <section>
+    <div class="esquema1">
+        <h4>Primer pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes1" src="..\imagenes\imagenesSW\foto1.png" alt="">
+            <div  class="explicar1">
+                <p class="explicacion1">El primer pas pero no menys important es fer la máquina i establir els noms de la mateixa.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Segon pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto2.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Procedirem a descarregar el paquet "apache2" ja que sense ell res d'això podria ser possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Tercer pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto3.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Seguidament generarem un certificat amb l'openssl, posariem la comanda "openssl genrsa -des3 -out server.key 2048" ens demanaria una contrasenya PEM la cual posarem la del nostre agrad, en el meu cas sería "grup6".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Quart pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto4.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Per al següent certificat sería gairebé el mateix procediment que l'anterior pero amb una altre comanda, necesitariem posar "openssl rsa -in server.key -out server.key.insecure" i com anteriorment hauriem de posar una contrasenya, en el meu cas sería de nou "grup6".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Cinquè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto5.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Ara, farem servir la comanda "mv" per renombrar els certificats.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Sisè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto6.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Amb la comanda "a2enmod ssl" farem el certificat propi, amb lo que podrem generar el certificat.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Setè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto7.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Per obtenir el certificat hauren de fer una altre comanda que sería "openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt" amb aquesta comanda ja quasi estaría jun amb el vuitè pas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema1">
+        <h4>Vuitè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes1" src="..\imagenes\imagenesSW\foto8.png" alt="">
+            <div  class="explicar1">
+                <p class="explicacion1">Una vegada posada la comanda anterior ens hauria de demanar diferents apartats, començant per "Country Name (2 letter code)" i acabant per el "email adress" posant tota la informació personal requerida.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Novè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto9.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Entrarem a configurar el paquet d'apache per activar el engine i adjuntar els certificats.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema1">
+        <h4>Decè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes1" src="..\imagenes\imagenesSW\foto10.png" alt="">
+            <div  class="explicar1">
+                <p class="explicacion1">A les línies 10:11:12 posaremos el "SSLEngine on", el "SSLCertificateFile" i per últim el següent certificat "SSLCertificateKeyFile".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Oncè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto11.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Aquesta sería la comanda..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Dotzè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto12.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Per comprobar el hostname de la nostre máquina hauria de ser www.(nom del grup).(domain) .</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Tretzè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto13.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">El dnsdomainname hauria de ser més de lo mateix pero només amb el grup i el domini, en el meu casa "grup6.cat".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Catorzè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto14.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Per configurar el timeout de la máquina haurem d'accedir a la configuració interna d'apache, per accedir, hauriem de fer ús de la comanda: "nano /etc/apache2/apache2.conf".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Quinzè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto15.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Baixerem i on posi Timeout 5 ho cambiarem per exemple per 500 perqué está en milèsimes amb el que fariem que el temps d'espera sigues poquet.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Setzè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto16.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Per configurar el máxim de peticions per al servidor les limitem a 6 per no sobrecarregar la máquina.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="esquema3">
+        <h4>Dissetè pas:</h4>
+    
+        <div class="info">
+            <img class="imagenes3" src="..\imagenes\imagenesSW\foto17.png" alt="">
+            <div  class="explicar3">
+                <p class="explicacion3">Y finalment fem us del "RESOLVCONF=yes" i ens hauria d'anar tot corectament amb l'apache2 perfectament configurat conjuntament amb el servidor web i la página web adjunta.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+  </body>
+
+</html>

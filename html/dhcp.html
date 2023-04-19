@@ -1,0 +1,155 @@
+<!DOCTYPE html/css>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="png" href="..\imagenes\labdoo\favicon.png">   
+</head>
+<header>
+    <title>DHCP - G6</title>
+    <div><img class="imagen1" src="..\imagenes\labdoo\simplemente.png"></div>
+    <link rel="stylesheet" href="..\css\dhcp.css">
+    <section class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="..\html\labdoo.html">Inicio</a></li>
+                <li><a href="..\html\dhcp.html">DHCP</a></li>
+                <li><a href="..\html\dns.html">DNS</a></li>
+                <li><a href="..\html\pressupost.html">Pressupost</a></li>
+                <li><a href="..\html\servidorproxy.html">S.Proxy</a></li>
+                <li><a href="..\html\servidorweb.html">S.Web</a></li>
+                <li><a href="..\html\firewall.html">Firewall</a></li>
+                <li><a href="..\html\copia.html">Copia de Seguretat</a></li>
+                <li><a href="..\html\contacto.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+<br><br><br><br><br>
+
+<body>
+    
+    <section>
+    <h1>DHCP</h1>
+    <h3>Dynamic Host configuration Protocol</h3>
+    <br>
+    <div class="introducion">
+        <p>El DHCP és un servidor que permet una assignació automàtica d'adreças IP, gateways predeterminades, així com
+            altres paràmetres de xarxa que necessitin els clients
+        </p>
+    </div>
+</section>
+    <br>
+    <section>
+        <div class="esquema1">
+            <h4>Primer pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes1" src="..\imagenes\imagenesdhcp\instalarserver.png" alt="">
+                <div  class="explicar1">
+                    <p class="explicacion1">En aquesta foto us mostro com estic creant la màquina des de 0 per iniciar una configuració des de 0 del DHCP.</p>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="esquema2">
+        <h4>Segon pas:</h4>
+        
+            <div>
+                <img class="imagenes2" src="..\imagenes\imagenesdhcp\proxy.png" alt="">
+                <div  class="explicar2">
+                    <p class="explicacion2">Aquí estem configurant el proxy per poder començar la instal·lació del nostre servidor DHCP ja que la xarxa que tenim connectada necessita el proxy per funcionar.</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="esquema3">
+        <h4>Tercer pas:</h4>
+        
+            <div>
+                <img class="imagenes3" src="..\imagenes\imagenesdhcp\comandoconf.png" alt="">
+                <div  class="explicar3">
+                    <p class="explicacion3">En aquesta foto hi ha l'ordre per començar la configuració.</p>
+                </div>
+            </div>
+    </div>
+    
+    
+        <div class="esquema4">
+            <h4>Quart pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes4" src="..\imagenes\imagenesdhcp\configuracionç.png" alt="">
+                <div  class="explicar4">
+                    <p class="explicacion4">Aquí configurarem la màquina de manera que necessitem per al nostre DHCP, nosaltres hem posat la mateixa gateway que la nostra IP ja que així ho volíem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="esquema5">
+            <h4>Cinquè pas:</h4>
+            
+                <div>
+                    <img class="imagenes5" src="..\imagenes\imagenesdhcp\paquete.png" alt="">
+                    <div  class="explicar5">
+                        <p class="explicacion5">Instalem el paquet del DHCP </p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="esquema6">
+            <h4>Sisè pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes6" src="..\imagenes\imagenesdhcp\confpaquete.png" alt="">
+                <div  class="explicar6">
+                    <p class="explicacion6">Aquí configurarem el nostre rang d'IP que volem assignar i la nostra IP del servidor perquè s'assigni als nostres clients.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="esquema7">
+            <h4>Setè pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes7" src="..\imagenes\imagenesdhcp\dhcpnano.png" alt="">
+                <div  class="explicar7">
+                    <p class="explicacion7">Aquesta es la comanda per obrir la configuració de ports.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="esquema8">
+            <h4>Vuitè pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes8" src="..\imagenes\imagenesdhcp\enp0s8.png" alt="">
+                <div  class="explicar8">
+                    <p class="explicacion8">Aqui marcarem que a l'IPv4 posarem l'emp0s8 actiu perquè la nostra configuració funcioni per al port assignat (en el nostre cas l'emp0s8).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="esquema9">
+            <h4>Novè pas:</h4>
+        
+            <div class="info">
+                <img class="imagenes9" src="..\imagenes\imagenesdhcp\enp0s3.png" alt="">
+                <div  class="explicar9">
+                    <p class="explicacion9">Aquí desactivem l'emp0s3 perquè no ens creï errors davant la nostra configuració.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="esquema10">
+            <h4>FINAL:</h4>
+        
+            <div class="info">
+                <div  class="explicar10">
+                    <p class="explicacio10">Un cop acabats tots els passos el nostre DHCP ja estaria configurat correctament..</p>
+                </div>
+            </div>
+        </div>  
+   
+    </section>
+</body>
